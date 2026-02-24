@@ -20,3 +20,14 @@ CMD ["sh", "-c", "\
         -subj \"/C=FR/ST=IDF/L=Paris/O=42/CN=${DOMAIN_NAME}\" && \
     envsubst '${DOMAIN_NAME}' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && \
     nginx -g 'daemon off;'"]
+
+# req -x509 : Génère un certificat auto-signé
+# -nodes : Ne pas chiffrer la clé privée (pas de passphrase)
+# -days 365 : Validité du certificat de 365 jours
+# -newkey rsa:2048 : Génère une nouvelle clé RSA de 2048 bits
+# -keyout : Spécifie le fichier de sortie pour la clé privée
+# -out : Spécifie le fichier de sortie pour le certificat
+# -subj : Spécifie les informations du sujet du certificat (C=Country, ST=State, L=Locality, O=Organization, CN=Common Name)
+
+# envsubst : Remplace les variables d'environnement dans le template de configuration Nginx
+# nginx -g 'daemon off;' : Démarre Nginx en mode non-daemon pour que le processus reste au premier plan, ce qui est nécessaire dans un conteneur

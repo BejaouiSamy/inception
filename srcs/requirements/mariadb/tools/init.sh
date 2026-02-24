@@ -6,7 +6,7 @@ mysqld_safe --user=mysql &
 # Attendre que MariaDB soit prêt
 sleep 3
 
-# Initialisation : créer la BDD, l'utilisateur, etc.
+# Initialisation
 mysql -u root <<EOF
 CREATE DATABASE IF NOT EXISTS $MYSQL_DATABASE;
 CREATE USER IF NOT EXISTS '$MYSQL_USER'@'%' IDENTIFIED BY '$MYSQL_PASSWORD';

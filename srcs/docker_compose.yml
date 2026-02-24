@@ -54,3 +54,5 @@ volumes:
 networks:
   inception:
     driver: bridge
+
+#echo "127.0.0.1 samy.42.fr" | sudo tee -a /etc/hosts modifie le nom de domaine pour le host
