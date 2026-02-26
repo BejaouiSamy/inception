@@ -18,7 +18,7 @@ Inception is a system administration project from the 42 Common Core curriculum.
 
 The infrastructure is composed of three services, each isolated in its own Docker container:
 
-- **NGINX** — the sole entry point, acting as a reverse proxy with TLSv1.2/1.3 enforced
+- **NGINX** — the sole entry point, acting as a reverse proxy with TLSv1.2/1.3 enforce
 - **WordPress + PHP-FPM** — the CMS, handling dynamic PHP content
 - **MariaDB** — the relational database storing WordPress data
 

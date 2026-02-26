@@ -1,6 +1,10 @@
 #!/bin/bash
 
-# Attendre que MariaDB soit disponible
+# plus robuste dans le cas dun projet plus complexe 
+#until mysqladmin ping -h mariadb -u root -p"${MYSQL_ROOT_PASSWORD}" --silent 2>/dev/null; do
+#    sleep 1
+#done
+
 sleep 5
 
 # Créer wp-config.php uniquement s'il n'existe pas déjà

@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     php7.4-zip \
     wget \
     tar \
+    default-mysql-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Télécharge et installe WordPress
