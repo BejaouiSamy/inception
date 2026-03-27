@@ -1,0 +1,17 @@
+for .env :
+
+DOMAIN_NAME=samy.42.fr
+MYSQL_DATABASE=wordpress
+MYSQL_USER=samy
+MYSQL_PASSWORD=motdepasse
+WP_ADMIN=samy_admin
+WP_ADMIN_PASSWORD=adminpass
+WP_ADMIN_EMAIL=admin@samy.42.fr
+WP_USER=user
+WP_USER_PASSWORD=userpass
+WP_USER_EMAIL=user@samy.42.fr
+WP_TITLE=Inception
+
+for .gitignore :
+
+srcs/.env
